@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.productDescription %>">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (htmlWebpackPlugin.options.ctx.mode.cordova) { %>, viewport-fit=cover<% } %>">
+    <title><%= htmlWebpackPlugin.options.productName %></title>
+
+    <link rel="icon" href="statics/icons/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="statics/icons/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="statics/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="statics/icons/favicon-16x16.png">
+    <!-- GA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107865947-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js',new Date())
+      gtag('config','UA-107865947-5')
+    </script>
+    <!-- FirebaseUI -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+
+  </head>
+  <body>
+    <noscript>
+      This is your fallback content in case JavaScript fails to load.
+    </noscript>
+
+    <!-- DO NOT touch the following <div> -->
+    <div id="q-app"></div>
+
+    <!-- built files will be auto injected here -->
+  </body>
+</html>

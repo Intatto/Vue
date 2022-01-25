@@ -1,0 +1,50 @@
+// app global css
+body
+  color $text
+  font-family $font-main
+button
+  touch-action manipulation
+
+// dai
+.fa-dai-icon:before
+  content url("~assets/dai.svg")
+  width .8rem
+
+// Improved flipOutX animation
+@keyframes flipOutX
+  0%
+    transform perspective(400px)
+    margin-top 0
+  30%
+    transform perspective(400px) rotate3d(1, 0, 0, -20deg)
+    opacity 1
+    margin-top 0
+  100%
+    transform perspective(400px) rotate3d(1, 0, 0, 90deg)
+    opacity 0
+    margin-top -4em
+
+// navigational tabs's quasar components are injected so CSS defined here:
+._navigation-tabs-wrapper
+  .q-tab-icon
+    font-size 1.3em
+  .active::after
+    content ' '
+    position absolute
+    bottom 0%
+    width 70%
+    height 3px
+    border-radius 2em
+    background-color $gray-light
+  .q-tabs-scroller,
+  .q-tab
+    flex 1 1 auto
+
+.q-input .q-if-label
+  font-weight 500
+
+.q-input-target
+  height inherit !important
+
+.q-btn-dropdown.q-btn-dense > .q-btn-inner > .on-right
+  margin-left 9px // default = 6px
